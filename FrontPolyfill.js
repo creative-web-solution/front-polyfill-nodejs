@@ -1,29 +1,29 @@
-import fs           from 'fs';
-import path         from 'path';
+let fs   = require( 'fs' );
+let path = require( 'path' );
 
 
 /**
  * Handle browser polyfilling
  * @class
  */
-export default class FrontPolyfill {
+class FrontPolyfill {
 
     // List of only activate polyfill
-    #neededPolyfillList;
+    _neededPolyfillList;
 
-    #polyfillResourceDir;
+    _polyfillResourceDir;
 
 
     /**
      * cosntructor
-     * 
-     * @param {String} [wantedPolyfillFilename=@config/packages/frontPolyfill.json] 
+     *
+     * @param {String} [wantedPolyfillFilename=@config/packages/frontPolyfill.json]
      */
-    async constructor( wantedPolyfillFilename = '@config/packages/frontPolyfill.json' ) {
+    constructor( wantedPolyfillFilename = '@config/packages/frontPolyfill.json' ) {
 
-        const POLYFILL_LIST         = await import( './Ressources/config/polyfill.json' );
-        const WANTED_POLYFILL_LIST  = await import( wantedPolyfillFilename );
-        this.#polyfillResourceDir   = path.join( __dirname, 'Ressources/js' );
+        const POLYFILL_LIST         = require( './Ressources/config/polyfill.json' );
+        const WANTED_POLYFILL_LIST  = require( wantedPolyfillFilename );
+        this._polyfillResourceDir   = path.join( __dirname, 'Ressources/js' );
 
         let neededPolyfillList = [];
 
@@ -38,7 +38,7 @@ export default class FrontPolyfill {
                     }
                 } );
 
-        this.#neededPolyfillList = neededPolyfillList;
+        this._neededPolyfillList = neededPolyfillList;
     }
 
 
@@ -54,18 +54,18 @@ export default class FrontPolyfill {
         if ( returnType == 'js' ) {
             let returnArray = [];
 
-            this.#neededPolyfillList.forEach( polyFill => {
+            this._neededPolyfillList.forEach( polyFill => {
                 returnArray.push( `{"${ testTag }":${ polyFill.test },"${ nameTag }":"${ polyFill.key }"}` );
             } );
 
             return `[${ returnArray.join( ',' ) }]`;
         }
 
-        return this.#neededPolyfillList;
+        return this._neededPolyfillList;
     }
 
 
-    #getContent( list ) {
+    _getContent( list ) {
         let returnArray, returnString;
 
         returnArray = [];
@@ -73,13 +73,13 @@ export default class FrontPolyfill {
         list.forEach( polyfillName => {
             let filename, polyfill;
 
-            polyfill = this.#neededPolyfillList.find( pf => pf.key === polyfillName );
+            polyfill = this._neededPolyfillList.find( pf => pf.key === polyfillName );
 
             if ( !polyfill ) {
                 return '';
             }
 
-            filename = path.join( this.#polyfillResourceDir, polyfill.file );
+            filename = path.join( this._polyfillResourceDir, polyfill.file );
 
             if ( !fs.existsSync( filename ) ) {
                 return '';
@@ -101,15 +101,17 @@ export default class FrontPolyfill {
      *
      * @return {String}
      */
-    getPolyfillContent = ( request ) => {
+    getPolyfillContent = polyfill_list => {
         let list;
 
-        if ( !request || !request.params || !request.params.polyfill_list || !request.params.polyfill_list.length ) {
+        if ( !polyfill_list || !polyfill_list.length ) {
             return '';
         }
 
-        list = new Set( request.params.polyfill_list.split( '-' ) );
+        list = new Set( polyfill_list.split( '-' ) );
 
-        return this.#getContent( Array.from( list ) );
+        return this._getContent( Array.from( list ) );
     }
 }
+
+module.exports = FrontPolyfill;

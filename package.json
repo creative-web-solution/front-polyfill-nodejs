@@ -1,7 +1,7 @@
 {
     "name": "front-polyfill-nodejs",
     "title": "Frontend polyfill in NodeJS",
-    "description": "Add and return the needed polyfills for browsers",
+    "description": "Concat and return the needed polyfills for browsers",
     "version": "1.0.0",
     "homepage": "https://github.com/creative-web-solution/front-polyfill-nodejs",
     "author": {
@@ -32,8 +32,5 @@
         ".gitignore"
     ],
     "dependencies": {},
-    "devDependencies": {},
-    "browserify": {
-        "transform": [["babelify", { "presets": ["@babel/preset-env"] }]]
-    }
+    "devDependencies": {}
 }
