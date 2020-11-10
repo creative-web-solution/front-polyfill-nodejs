@@ -1,0 +1,39 @@
+{
+    "name": "front-polyfill-nodejs",
+    "title": "Frontend polyfill in NodeJS",
+    "description": "Add and return the needed polyfills for browsers",
+    "version": "1.0.0",
+    "homepage": "https://github.com/creative-web-solution/front-polyfill-nodejs",
+    "author": {
+        "name": "Creative Web Solution",
+        "email": "contact@cws-studio.com",
+        "url": "https://www.cws-studio.com"
+    },
+    "keywords": [
+        "Javascript",
+        "Polyfill"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:creative-web-solution/front-polyfill-nodejs.git"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "engines": {
+        "node": ">=12.0.0",
+        "npm": ">=6.0.0"
+    },
+    "scripts": {},
+    "files": [
+        "Ressources",
+        "FrontPolyfill.js",
+        "CHANGELOG.md",
+        "README.md",
+        ".gitignore"
+    ],
+    "dependencies": {},
+    "devDependencies": {},
+    "browserify": {
+        "transform": [["babelify", { "presets": ["@babel/preset-env"] }]]
+    }
+}

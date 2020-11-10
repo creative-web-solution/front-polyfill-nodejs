@@ -1,0 +1,22 @@
+{
+    "extends":                          "eslint:recommended",
+    "parser":                           "babel-eslint",
+    "plugins":                          [],
+    "parserOptions": {
+        "ecmaVersion":                  2020,
+        "sourceType":                   "module"
+    },
+    "rules": {
+        "no-console":                   "off"
+    },
+    "env": {
+        "browser":                      true,
+        "amd":                          true,
+        "node":                         true,
+        "es6":                          true
+    },
+    "globals": {
+        "console":                      true,
+        "process":                      true
+    }
+}

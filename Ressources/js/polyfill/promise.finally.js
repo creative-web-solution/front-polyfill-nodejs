@@ -1,0 +1,1 @@
+(function(){Promise.prototype.finally=function n(t){var r=this;var e=r.constructor;if(typeof t==="function"){return r.then(function(n){return e.resolve(t()).then(function(){return n})},function(n){return e.resolve(t()).then(function(){throw n})})}return r.then(t,t)};}());
