@@ -31,6 +31,7 @@ A sample of the configuration file can be found here: `Ressources/frontPolyfill-
 * Object.assign()
 * Object.entries()
 * Object.values()
+* window.CSS.paintWorklet()
 * HTMLPictureElement
 * requestAnimationFrame()
 * requestIdleCallback()
@@ -54,7 +55,7 @@ Create a configuration based on `Ressources/frontPolyfill-settings.sample.json` 
 Add `get_front_polyfill_list` and `get_front_polyfill_content` extentions to Twig:
 
 ```js
-// path/to/frontPolyfill.json is created form Ressources/frontPolyfill-settings.sample.json
+// path/to/frontPolyfill.json is created from (a copy of) Ressources/frontPolyfill-settings.sample.json
 const frontPolyfill = new FrontPolyfill( 'path/to/frontPolyfill.json' );
 
 Twig.extendFunction( 'get_front_polyfill_list',    frontPolyfill.getPolyfillList );

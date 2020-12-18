@@ -237,6 +237,20 @@
             "android": 5
         }
     },
+    "paintworklet": {
+        "file": "polyfill/css-paint-polyfill.js",
+        "test": "!(\"paintWorklet\"in window.CSS)",
+        "support": {
+            "chrome": 65,
+            "firefox": false,
+            "ie": false,
+            "edge": 79,
+            "opera": 52,
+            "safari": false,
+            "ios": false,
+            "android": 65
+        }
+    },
     "picture": {
         "file": "polyfill/dom/picturefill.js",
         "test": "!(\"HTMLPictureElement\" in window)",
@@ -350,7 +364,7 @@
         }
     },
     "intobs": {
-        "file": "intersection-observer.js",
+        "file": "polyfill/intersection-observer.js",
         "test": "!(\"IntersectionObserver\" in window && \"IntersectionObserverEntry\" in window && \"intersectionRatio\" in window.IntersectionObserverEntry.prototype)",
         "support": {
             "chrome": 58,
@@ -364,7 +378,7 @@
         }
     },
     "intobsisint": {
-        "file": "intersection-observer-is-intersecting.js",
+        "file": "polyfill/intersection-observer-is-intersecting.js",
         "test": "\"IntersectionObserver\" in window && \"IntersectionObserverEntry\" in window && \"intersectionRatio\" in window.IntersectionObserverEntry.prototype && !(\"isIntersecting\" in window.IntersectionObserverEntry.prototype)",
         "support": {
             "chrome": 58,

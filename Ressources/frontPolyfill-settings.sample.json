@@ -68,6 +68,10 @@
             "name": "Object.values()",
             "active": false
         },
+        "paintworklet": {
+            "name": "window.CSS.paintWorklet()",
+            "active": false
+        },
         "picture": {
             "name": "HTMLPictureElement",
             "active": false
