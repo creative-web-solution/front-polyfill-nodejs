@@ -1,7 +1,7 @@
 # Front polyfill bundle by CWS
 
 
-## Use ES6+ syntax
+## This bundle use ES6+ syntax
 
 * let, const
 * class
@@ -55,11 +55,15 @@ Create a configuration based on `Ressources/frontPolyfill-settings.sample.json` 
 Add `get_front_polyfill_list` and `get_front_polyfill_content` extentions to Twig:
 
 ```js
-// path/to/frontPolyfill.json is created from (a copy of) Ressources/frontPolyfill-settings.sample.json
-const frontPolyfill = new FrontPolyfill( 'path/to/frontPolyfill.json' );
+import FrontPolyfill from 'front-polyfill/FrontPolyfill';
 
-Twig.extendFunction( 'get_front_polyfill_list',    frontPolyfill.getPolyfillList );
-Twig.extendFunction( 'get_front_polyfill_content', frontPolyfill.getPolyfillContent );
+function extendTwig( Twig ) {
+    // path/to/frontPolyfill.json is created from (a copy of) Ressources/frontPolyfill-settings.sample.json
+    const frontPolyfill = new FrontPolyfill( 'path/to/frontPolyfill.json' );
+
+    Twig.extendFunction( 'get_front_polyfill_list',    frontPolyfill.getPolyfillList );
+    Twig.extendFunction( 'get_front_polyfill_content', frontPolyfill.getPolyfillContent );
+}
 ```
 
 **Route**
