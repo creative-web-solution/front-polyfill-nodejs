@@ -1,37 +1,37 @@
 {
-    "name": "front-polyfill",
-    "title": "Frontend polyfill in NodeJS",
-    "description": "Concat and return the needed polyfills for browsers",
-    "version": "1.1.0",
-    "homepage": "https://github.com/creative-web-solution/front-polyfill-nodejs",
-    "author": {
-        "name": "Creative Web Solution",
-        "email": "contact@cws-studio.com",
-        "url": "https://www.cws-studio.com"
-    },
-    "keywords": [
-        "Javascript",
-        "NodeJS",
-        "Polyfill"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:creative-web-solution/front-polyfill-nodejs.git"
-    },
-    "license": "MIT",
-    "private": false,
-    "engines": {
-        "node": ">=12.0.0",
-        "npm": ">=6.0.0"
-    },
-    "scripts": {},
-    "files": [
-        "Ressources",
-        "FrontPolyfill.js",
-        "CHANGELOG.md",
-        "README.md",
-        ".gitignore"
-    ],
-    "dependencies": {},
-    "devDependencies": {}
+  "name": "@creative-web-solution/front-polyfill",
+  "title": "Frontend polyfill in NodeJS",
+  "description": "Concat and return the needed polyfills for browsers",
+  "version": "1.1.0",
+  "homepage": "https://github.com/creative-web-solution/front-polyfill-nodejs",
+  "author": "Creative Web Solution <contact@cws-studio.com> (https://www.cws-studio.com)",
+  "keywords": [
+    "Javascript",
+    "NodeJS",
+    "Polyfill"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/creative-web-solution/front-polyfill-nodejs.git"
+  },
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.0.0"
+  },
+  "scripts": {},
+  "files": [
+    "Ressources",
+    "FrontPolyfill.js",
+    "CHANGELOG.md",
+    "README.md",
+    ".gitignore"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/creative-web-solution/front-polyfill-nodejs/issues"
+  },
+  "main": "FrontPolyfill.js"
 }
