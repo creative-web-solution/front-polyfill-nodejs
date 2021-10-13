@@ -349,6 +349,20 @@
             "android": 5
         }
     },
+    "trustedtypes": {
+        "file": "polyfill/trustedtypes.js",
+        "test": "!(window['trustedTypes'] || window['TrustedTypes'])",
+        "support": {
+            "chrome": 83,
+            "firefox": false,
+            "ie": false,
+            "edge": 83,
+            "opera": 69,
+            "safari": false,
+            "ios": false,
+            "android": 83
+        }
+    },
     "abtctrl": {
         "file": "polyfill/fetch/abort-controller.js",
         "test": "!(\"AbortController\" in window)",
