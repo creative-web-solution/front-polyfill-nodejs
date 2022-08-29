@@ -22,15 +22,16 @@ class FrontPolyfill {
     constructor( wantedPolyfillFilename = '@config/packages/frontPolyfill.json' ) {
 
         const POLYFILL_LIST         = require( './Ressources/config/polyfill.json' );
-        const WANTED_POLYFILL_LIST  = require( wantedPolyfillFilename );
+        const WANTED_POLYFILL_LOAD  = require( wantedPolyfillFilename );
+        const WANTED_POLYFILL_LIST  = WANTED_POLYFILL_LOAD.polyfill ? WANTED_POLYFILL_LOAD.polyfill : WANTED_POLYFILL_LOAD;
         this._polyfillResourceDir   = path.join( __dirname, 'Ressources/js' );
 
         let neededPolyfillList = [];
 
         Object
-                .keys( WANTED_POLYFILL_LIST.polyfill )
+                .keys( WANTED_POLYFILL_LIST )
                 .forEach( polyfillKey => {
-                    if ( WANTED_POLYFILL_LIST.polyfill[ polyfillKey ].active ) {
+                    if ( WANTED_POLYFILL_LIST[ polyfillKey ].active ) {
                         neededPolyfillList.push( {
                             ...POLYFILL_LIST[ polyfillKey ],
                             "key": polyfillKey

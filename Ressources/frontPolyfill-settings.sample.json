@@ -1,120 +1,118 @@
 {
-    "polyfill": {
-        "arrfi": {
-            "name": "Array.findIndex()",
-            "active": false
-        },
-        "arrfill": {
-            "name": "Array.fill()",
-            "active": false
-        },
-        "arrfind": {
-            "name": "Array.find()",
-            "active": false
-        },
-        "arrfrom": {
-            "name": "Array.from()",
-            "active": false
-        },
-        "arrinc": {
-            "name": "Array.includes()",
-            "active": false
-        },
-        "arrof": {
-            "name": "Array.of()",
-            "active": false
-        },
-        "blob": {
-            "name": "new Blob()",
-            "active": false
-        },
-        "classlist": {
-            "name": "Element.classList",
-            "active": false
-        },
-        "closest": {
-            "name": "Element.closest()",
-            "active": false
-        },
-        "domch": {
-            "name": "Element.append",
-            "active": false
-        },
-        "domnav": {
-            "name": "Element.nextElementSibling",
-            "active": false
-        },
-        "eachnl": {
-            "name": "NodeList.forEach()",
-            "active": false
-        },
-        "matches": {
-            "name": "Element.matches()",
-            "active": false
-        },
-        "matchmedia": {
-            "name": "window.matchMedia()",
-            "active": false
-        },
-        "objass": {
-            "name": "Object.assign()",
-            "active": false
-        },
-        "objentries": {
-            "name": "Object.entries()",
-            "active": false
-        },
-        "objvalues": {
-            "name": "Object.values()",
-            "active": false
-        },
-        "paintworklet": {
-            "name": "window.CSS.paintWorklet()",
-            "active": false
-        },
-        "picture": {
-            "name": "HTMLPictureElement",
-            "active": false
-        },
-        "raf": {
-            "name": "requestAnimationFrame()",
-            "active": false
-        },
-        "ric": {
-            "name": "requestIdleCallback()",
-            "active": false
-        },
-        "promise": {
-            "name": "Promise",
-            "active": false
-        },
-        "promfinally": {
-            "name": "Promise.finally",
-            "active": false
-        },
-        "fetch": {
-            "name": "fetch()",
-            "active": false
-        },
-        "schparams": {
-            "name": "URLSearchParams",
-            "active": false
-        },
-        "trustedtypes": {
-            "name": "TrustedTypes",
-            "active": false
-        },
-        "abtctrl": {
-            "name": "AbortController",
-            "active": false
-        },
-        "intobs": {
-            "name": "IntersectionObserver",
-            "active": false
-        },
-        "intobsisint": {
-            "name": "IntersectionObserverEntry.isIntersecting",
-            "active": false
-        }
+    "arrfi": {
+        "name": "Array.findIndex()",
+        "active": false
+    },
+    "arrfill": {
+        "name": "Array.fill()",
+        "active": false
+    },
+    "arrfind": {
+        "name": "Array.find()",
+        "active": false
+    },
+    "arrfrom": {
+        "name": "Array.from()",
+        "active": false
+    },
+    "arrinc": {
+        "name": "Array.includes()",
+        "active": false
+    },
+    "arrof": {
+        "name": "Array.of()",
+        "active": false
+    },
+    "blob": {
+        "name": "new Blob()",
+        "active": false
+    },
+    "classlist": {
+        "name": "Element.classList",
+        "active": false
+    },
+    "closest": {
+        "name": "Element.closest()",
+        "active": false
+    },
+    "domch": {
+        "name": "Element.append",
+        "active": false
+    },
+    "domnav": {
+        "name": "Element.nextElementSibling",
+        "active": false
+    },
+    "eachnl": {
+        "name": "NodeList.forEach()",
+        "active": false
+    },
+    "matches": {
+        "name": "Element.matches()",
+        "active": false
+    },
+    "matchmedia": {
+        "name": "window.matchMedia()",
+        "active": false
+    },
+    "objass": {
+        "name": "Object.assign()",
+        "active": false
+    },
+    "objentries": {
+        "name": "Object.entries()",
+        "active": false
+    },
+    "objvalues": {
+        "name": "Object.values()",
+        "active": false
+    },
+    "paintworklet": {
+        "name": "window.CSS.paintWorklet()",
+        "active": false
+    },
+    "picture": {
+        "name": "HTMLPictureElement",
+        "active": false
+    },
+    "raf": {
+        "name": "requestAnimationFrame()",
+        "active": false
+    },
+    "ric": {
+        "name": "requestIdleCallback()",
+        "active": false
+    },
+    "promise": {
+        "name": "Promise",
+        "active": false
+    },
+    "promfinally": {
+        "name": "Promise.finally",
+        "active": false
+    },
+    "fetch": {
+        "name": "fetch()",
+        "active": false
+    },
+    "schparams": {
+        "name": "URLSearchParams",
+        "active": false
+    },
+    "trustedtypes": {
+        "name": "TrustedTypes",
+        "active": false
+    },
+    "abtctrl": {
+        "name": "AbortController",
+        "active": false
+    },
+    "intobs": {
+        "name": "IntersectionObserver",
+        "active": false
+    },
+    "intobsisint": {
+        "name": "IntersectionObserverEntry.isIntersecting",
+        "active": false
     }
 }
